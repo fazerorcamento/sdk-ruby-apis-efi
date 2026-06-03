@@ -7,11 +7,11 @@ Gem::Specification.new do |spec|
   spec.version = SdkRubyApisEfi::VERSION
   spec.authors = ["Debora Amaral"]
   spec.email = ["consultoria@sejaefi.com.br"]
- 
+
   spec.summary       = "Efí Pay API Ruby Gem"
   spec.description   = "A ruby gem for integration of your backend with the
                         payment services provided by Efí Pay"
- 
+
   spec.homepage      = "https://github.com/efipay/sdk-ruby-apis-efi"
   spec.license       = "MIT"
   spec.required_ruby_version = ">= 2.7.0"
@@ -26,10 +26,10 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "rake", "~> 13.0"
-  spec.add_dependency "http", "~> 4.3"
-  spec.add_dependency "cgi", "~> 0.1"
-  spec.add_dependency "json", "~> 2.5"
-  spec.add_dependency "base64", "~> 0.1"
-  spec.add_dependency "uri", "~> 0.1"
+  spec.add_dependency "rake", ">= 12.3.3"
+  spec.add_dependency "http"
+  spec.add_dependency "cgi", ">= 0.4.2"
+  spec.add_dependency "json", ">= 2.19.2"
+  spec.add_dependency "base64"
+  spec.add_dependency "uri", ">= 0.12.5"
 end
