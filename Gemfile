@@ -1,12 +1,13 @@
 source "https://rubygems.org"
 
 gem "coveralls", require: false
-gem "uri" 
-gem "http" 
-gem "cgi" 
-gem "json" 
+gem "uri"
+gem "http"
+gem "cgi"
+gem "json"
 gem "base64"
-gem 'sdk_ruby_apis_efi', path: '/home/vagrant/sdk-ruby-apis-efi'
+gem "sdk_ruby_apis_efi"
+
 # require "pry"
 # Pry.start
 
