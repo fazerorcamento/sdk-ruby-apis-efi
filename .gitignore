@@ -17,8 +17,6 @@ test/version_tmp
 tmp
 .ruby-gemset
 .ruby-version
-.rspec
 turbulence
-spec/
 Rakefile
 .idea
