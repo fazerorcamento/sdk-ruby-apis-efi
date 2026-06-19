@@ -24,10 +24,12 @@ Or install it yourself as:
 $ gem install sdk_ruby_apis_efi
 ```
 
-## Tested with
+## Requirements
+
+Requires **Ruby >= 3.2** (the `http` gem 6.x dependency).
+
 ```
-ruby 2.7.0
-ruby 3.0.4
+Tested with ruby 3.2, 3.4
 ```
 
 ## Basic usage

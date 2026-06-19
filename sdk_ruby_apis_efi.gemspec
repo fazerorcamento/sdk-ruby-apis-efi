@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
 
   spec.homepage      = "https://github.com/efipay/sdk-ruby-apis-efi"
   spec.license       = "MIT"
-  spec.required_ruby_version = ">= 2.7.0"
+  spec.required_ruby_version = ">= 3.2.0"
 
 
   spec.files = Dir.chdir(File.expand_path(__dir__)) do
@@ -26,9 +26,8 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "bundler", "~> 2.0"
   spec.add_dependency "rake", "~> 13.0"
-  spec.add_dependency "http", "~> 4.3"
+  spec.add_dependency "http", "~> 6.0"
   spec.add_dependency "cgi", "~> 0.1"
   spec.add_dependency "json", "~> 2.5"
   spec.add_dependency "base64", "~> 0.1"

@@ -156,7 +156,7 @@ module SdkRubyApisEfi
       client = HTTP
         .timeout(timeout_settings)
         .headers(headers)
-        .basic_auth(auth_headers)
+        .basic_auth(**auth_headers)
 
       response =
         if ssl_context
