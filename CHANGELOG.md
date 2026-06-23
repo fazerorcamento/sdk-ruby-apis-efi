@@ -1,6 +1,15 @@
 Changelog
 =========
 
+Unreleased
+----------
+* fix: add configurable per-operation HTTP timeouts (connect/write/read) to every request and to authentication, so an unresponsive Efí endpoint raises `HTTP::TimeoutError` instead of hanging the process indefinitely. Configurable via the `timeout` option or the `EFI_HTTP_CONNECT_TIMEOUT` / `EFI_HTTP_WRITE_TIMEOUT` / `EFI_HTTP_READ_TIMEOUT` env vars (defaults: 10/10/30s).
+* fix: validate the certificate (PEM) when first used and fail fast with a clear `SdkRubyApisEfi::CertificateError` for missing, encrypted, or cert-only files — no more passphrase prompts hanging on a TTY-less worker. The PEM is now read and parsed once per instance instead of twice on every request.
+* docs: document the expected PEM format (certificate + non-encrypted RSA key) and the timeout configuration.
+* fix: call `.basic_auth(**auth_headers)` during authentication so the SDK keeps working on `http` 6.x (which made `user:`/`pass:` required keywords); this is backward compatible with `http` 4.x/5.x.
+* chore: upgrade the `http` dependency to `~> 6.0` and raise `required_ruby_version` to `>= 3.2.0` (required by `http` 6.x).
+* chore: drop `bundler` from the runtime dependencies.
+
 Version 1.0.2 (2023-11-06)
 --------------------------
 * feat: ofCancelSchedulePix added into Open Finance

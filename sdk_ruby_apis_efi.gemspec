@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
 
   spec.homepage      = "https://github.com/efipay/sdk-ruby-apis-efi"
   spec.license       = "MIT"
-  spec.required_ruby_version = ">= 2.7.0"
+  spec.required_ruby_version = ">= 3.2.0"
 
 
   spec.files = Dir.chdir(File.expand_path(__dir__)) do
@@ -27,9 +27,12 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "rake", ">= 12.3.3"
-  spec.add_dependency "http"
+  spec.add_dependency "http", "~> 6.0"
   spec.add_dependency "cgi", ">= 0.4.2"
   spec.add_dependency "json", ">= 2.19.2"
   spec.add_dependency "base64"
   spec.add_dependency "uri", ">= 0.12.5"
+
+  spec.add_development_dependency "rspec", "~> 3.0"
+  spec.add_development_dependency "webmock", "~> 3.0"
 end
